@@ -5,7 +5,7 @@ const pagesRoutes = require("./routes/pagesRoutes")
 
 
 const app = express();
- 
+
 //Definition du moteur de rendu
 app.set('view engine','ejs');
 app.set('views','./html');
