@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur Ecole 241 Business</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,100;1,400&display=swap');
+    </style>
+
+    <%- include('partials/header')%>
+    
+    <section class="section-bg">
+        <div class="container">
+            <div class="row glass align-items-center">
+                <div class="col-lg-5">
+                    <h2 class="section-h2">La Silicon Valley viens à vous.</h2>
+                    <p>C’est un peu plus de 36% de la population gabonaise qui est au chômage (Source OIT). Ce qui fait de lui l’un des pays avec le plus grand taux de chômage en Afrique. C’est une situation que nous avons voulu pallier en offrant aux gabonais des opportunités d’emploi pas comme les autres.
+                        En effet, c’est 82% des grandes entreprises mondiales/ de la silicon qui cherchent des personnes qualifiées et disponibles pour résoudre leurs besoins ce qui à présent ne semble pas comblé. 
+                        Ces entreprises sans faire de distinctions de provenance cherchent essentiellement de la main d’œuvre qualifiée et abordable. Ce qui fait de l’Afrique un potentiel, un hub numérique pour répondre à cette demande des plus grandes entreprises qui devient de plus en plus grande.
+                        Mais comment répondre à ces demandes ?
+                        C’est en se formant à leur standard.
+                        </p>
+                </div>
+                <div class="col-lg-7">
+                    <img src="assets\css\img\silicon valley.jpg" alt="" class="img-fluid" style="border-radius:40px;">
+                </div>
+            </div>
+        </div>
+        <div class="container mb-5 mt-5">
+            <div class="row align-items-center justify-content-around">
+                <div class="col-lg-4 glass*">
+                    <img src="assets\css\img\business-3d-businessman-standing-with-one-foot-on-a-growing-pile-of-gold-bars.png" alt="">
+                </div>
+                <div class="col-lg-6 glass">
+                    <h2 class="section-h2">
+                        Acquerir des competences professionnelle afin se ve vendre sur le marché International.
+                    </h2>
+                    <p>Se former c’est créer des opportunités futures.
+                        Même si la demande extérieure est grandissante, elle reste tout de même difficile à satisfaire sans les compétences recherchées.
+                        C’est dans cette optique que l’école 241 business ainsi que ses partenaires internationaux s’allient pour apporter ses standards mondiaux dans ses formations. Nous vous rendons aptes et disponibles pour le marché international après un passage par nos formations.
+                        </p>
+                </div>
+            </div>
+        </div>
+        <!-- Formulaire -->
+        <div class="trailer">
+            <span class="close" onclick="toggle();">&#10006;</span>
+            <div class="container-form d-flex justify-content-center">
+                    <form action="/" method="post" style="width: 400px;">
+                         <!-- Message d'erreur du formulaire -->
+                        <% if(typeof alerts != "undefined"){%> 
+                                <% for(alert of alerts){%> 
+                            <p class="errorMsg"><%= alert.msg %> </p>
+                                <%}%> 
+                        <%}%>
+                        <label for="nom">Nom:</label><br>
+                        <input name="nom" type="text" id="Nom" placeholder="Votre nom"  style="width:300px"><br>
+                        <label for="prenom">Prenom:</label><br>
+                        <input name="prenom" type="text" id="prenom" placeholder="Votre prenom"  style="width:300px"><br>
+                        <label for="email">Email:</label><br>
+                        <input name="email" type="email" id="email" placeholder="Votre email"  style="width:300px"><br>
+                        <label for="password">Mot de passe</label><br>
+                        <input name="password" type="password" id="password" placeholder="Mot de passe" style="width:300px"><br>
+                        <input type="submit" style="width: 200px;">
+                    </form>
+                </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card cardglass">
+                        <div class="card-img"></div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3><strong>Acquérir des compétences pratiques et durables:</strong></h3> 
+                            </div>
+                            <div class="card-paragraph">
+                                <p>A l’école 241, vous ne devenez pas seulement des personnes savantes mais des personnes qualifiées capables de résoudre des problématiques des entreprises qui feront appel à vous.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card cardglass">
+                        <div class="card-img"></div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3><strong>Visible sur le marché international</strong></h3> 
+                            </div>
+                            <div class="card-paragraph">
+                                <p>On reconnaît une personne à sa valeur. Nous veillons à ce que ce soit vos compétences qui parlent pour vous. Ces formations feront de vous des personnes aptes à postuler pour n’importe quelle structure mais aussi des personnes qui à cause de leurs compétences font parler d’elles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card cardglass">
+                        <div class="card-img"></div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3><strong>Vous donner l’opportunité de vous changer</strong></h3> 
+                            </div>
+                            <div class="card-paragraph">
+                                <p>L’une des plus grandes compétences que nous offrons à l’école 241; c’est la capacité d’apprendre à apprendre. Nous faisons de vous des réceptacles du savoir; des personnes toujours à la pointe des nouveautés mais surtout des personnes capables d’assimiler et de répliquer sur n’importe quel sujet lié à votre domaine de formation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card cardglass">
+                        <div class="card-img"></div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3><strong>Si vous souhaitez vous reconvertir</strong></h3> 
+                            </div>
+                            <div class="card-paragraph">
+                                <p>Si la possibilité d’une reconversion a souvent été minimisée en Afrique, grâce à nos formations, vous avez la possibilité de changer de carrière pour le numérique même avec un background complètement différent. 
+                                    La possibilité de vous voir vous reconstruire c’est ce qui nous motive avant toute chose. Et c’est cette occasion que nous vous offrons durant nos formations.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conteneur">
+            <div class="row align-items-center justify-content-around baniere">
+                <div class="col-lg-4">
+                    <img src="assets/css/img/business-3d-stack-of-different-books.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="baniere-texte fw-bold">Prêt à  propulser votre carrière? Formez vous et obtenez une certification internationale.</h3>
+                    <a href="#" class="btn bouton" onclick="toggle()">Je me forme</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="assets/css/img/business-3d-lit-light-bulb.png" alt="">
+                </div>
+                <div class="col-lg-6 glass">
+                    <p>Notre vision</p>
+                    <h2>Désireux de voir une jeunesse qui se prend en main pour assurer son avenir; nous avons voulu mettre à la disposition de ses jeunes un environnement où ils pourront se former et être des valeurs ajoutées tant au niveau national qu’international. 
+                        Notre objectif est de créer un environnement numérique 100% africain où ces même africains seront ceux qui…
+                        </h2>
+                    <a href="#" class="btn bouton">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 mb-5">
+            <h1 class="text-center fw-bold mb-5 section-title">Nos formations</h1>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="cardglass card">
+                        <div class="card-img">
+                            <img src="assets/css/img/ingenieur logiciel.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                Ingenieur Logiciel
+                            </h2>
+                            <hr>
+                            <p><strong>Durée:</strong> 12 mois</p>
+                            <p><strong>inscription:</strong> 50,000fcfa</p>
+                            <p><strong>Frais de formation:</strong> 1,200,000fcfa</p>
+                            <a href="#" class="btn bouton" onclick="toggle()">S'inscrire</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cardglass card">
+                        <div class="card-img">
+                            <img src="assets/css/img/Dev fullstack.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                Developpeur Full Stack
+                            </h2>
+                            <hr>
+                            <p><strong>Durée:</strong> 12 mois</p>
+                            <p><strong>inscription:</strong> 50,000fcfa</p>
+                            <p><strong>Frais de formation:</strong> 1,200,000fcfa</p>
+                            <a href="#" class="btn bouton" onclick="toggle()">S'inscrire</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cardglass card">
+                        <div class="card-img">
+                            <img src="assets/css/img/emile-perron-xrVDYZRGdw4-unsplash.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                Ingenieur Cloud Google
+                            </h2>
+                            <hr>
+                            <p><strong>Durée:</strong> 12 mois</p>
+                            <p><strong>inscription:</strong> 50,000fcfa</p>
+                            <p><strong>Frais de formation:</strong> 1,200,000fcfa</p>
+                            <a href="#" class="btn bouton" onclick="toggle()">S'inscrire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+       <!-- <div class="container mt-5 mb-5">
+            <h1 class="text-center fw-bold mb-5 section-title">Nos tarifs</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="card glass">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3>Frais d'inscription</h2>
+                            </div>
+                            <hr>
+                            <div class="card-paragraph">
+                                <p>Debut: JJ/MM/AA</p>
+                                <p>Fin: JJ/MM/AA</p>
+                                <hr>
+                                <h3>Montant:</h3>
+                                <h1>50,000fcfa</h1>
+                                <hr>
+                            </div>
+                            <a href="#" class="btn bouton">S'inscrire</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card glass">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3>Frais de formation</h2>
+                            </div>
+                            <hr>
+                            <div class="card-paragraph">
+                                <p>Debut: Septembre 2022</p>
+                                <p>Durée: 12 mois</p>
+                                <hr>
+                                <h3>Montant:</h3>
+                                <h1>1,200,000fcfa</h1>
+                                <hr>
+                            </div>
+                            <a href="#" class="btn bouton">Voir les modalités</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <%- include('partials/Partenaire') %>
+
+      <!-- <div class="container d-flex justify-content-center">
+            <div class="container-form mt-5 mb-5">
+                <h1 class="text-center fw-bold section-title">Formulaire d'inscription</h1>
+                    <form action="">
+                        <h2>Vos coordonnees</h2>
+                        <label for="nom">Nom:</label><br>
+                        <input type="text" id="Nom" placeholder="Votre nom" required><br>
+                        <label for="prenom">Prenom:</label><br>
+                        <input type="text" id="prenom" placeholder="Votre prenom" required><br>
+                        <label for="nom">Email:</label><br>
+                        <input type="email" id="email" placeholder="Votre email" required><br>
+                        <label for="num">Numero de Tel:</label><br>
+                        <input type="tel" id="num" placeholder="Votre numero" required><br>
+                        <label for="province">Province: <span>(facultatif)</span></label><br>
+                        <select name="provinces" id="province">
+                            <option value="" disabled selected>Choisissez votre province...</option>
+                            <option value="Estuaire">Estuaire</option>
+                            <option value="Woleu-Ntem">Woleu-Ntem</option>
+                            <option value="Ogooué-Maritime">Ogooué-Maritime</option>
+                            <option value="Ogooué-Lolo">Ogooué-Lolo</option>
+                            <option value="Ogooué-Ivindo">Ogooué-Ivindo</option>
+                            <option value="Moyen-Ogooué">Moyen-Ogooué</option>
+                            <option value="Ngounié">Ngounié</option>
+                            <option value="Nyanga">Nyanga</option>
+                            <option value="Haut-Ogooué">Haut-Ogooué</option>
+                        </select><br>
+                        <label for="ville">Votre ville: <span>(facultatif)</span></label><br>
+                        <input type="text" id="ville" placeholder="Votre ville"><br>
+                        <h2>Referentiel</h2>
+                        <label for="formation">Formations:</label><br>
+                        <select name="formations" id="formation" required>
+                            <option value="" disabled selected>Choosir votre formation...</option>
+                            <option value="Ingenieur Logiciel">Ingenieur Logiciel</option>
+                            <option value="Ingenieur Cloud" disabled>Ingenieur Google Cloud</option>
+                        </select><br><br>
+                        <label for="paiement">Comment voulez-vous payer les frais de formation:</label><br>
+                        <input type="submit" style="width: 200px;">
+                    </form>
+                    <div class="drops">
+                      <div class="drop drop-1"></div>
+                      <div class="drop drop-2"></div>
+                      <div class="drop drop-3"></div>
+                      <div class="drop drop-4"></div>
+                      <div class="drop drop-5"></div>
+                    </div>
+                </div>
+        </div>-->
+    </section>
+</section>
+    <%- include('partials/footer') %>
+    <script>
+        function toggle(){
+          var trailer = document.querySelector(".trailer")
+          trailer.classList.toggle("active");
+      }
+    </script>
+    <script src="assets/css/js/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll('.card'),{
+            max:25,
+            speed:400,
+            glare:true,
+            "max-glare":0.5,
+        })
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+            (function($) { // Begin jQuery
+	$(function() { // DOM ready
+	  // If a link has a dropdown, add sub menu toggle.
+	  $('nav ul li a:not(:only-child)').click(function(e) {
+		$(this).siblings('.nav-dropdown').toggle();
+		// Close one dropdown when selecting another
+		$('.nav-dropdown').not($(this).siblings()).hide();
+		e.stopPropagation();
+	  });
+	  // Clicking away from dropdown will remove the dropdown class
+	  $('html').click(function() {
+		$('.nav-dropdown').hide();
+	  });
+	  // Toggle open and close nav styles on click
+	  $('#nav-toggle').click(function() {
+		$('nav ul').slideToggle();
+	  });
+	  // Hamburger to X toggle
+	  $('#nav-toggle').on('click', function() {
+		this.classList.toggle('active');
+	  });
+	}); // end DOM ready
+  })(jQuery); // end jQuery
+        </script>
+</body>
+</html>
