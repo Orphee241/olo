@@ -24,23 +24,13 @@ router.get('/',(req,res)=>{
 
 router.post("/", [
 
-    check("nom", "Le nom doit comporter au moins 3 caractères")
+    check("pseudo", "Pseudo incorrect")
         .exists()
         .isLength({min: 3})
         .trim()
         .escape(),
-    check("prenom", "Le prénom doit comporter au moins 3 caractères")
+    check("pass", "Mot de pass incorrect")
         .isLength({min:3})
-        .trim()
-        .escape(),
-    check("email", "Entrer une adresse e-mail correcte")
-        .isEmail()
-        .normalizeEmail()
-        .trim()
-        .escape(),
-    check("password", "Le mot de passe doit commporter au minimum 7 caractères")
-        .exists()
-        .isLength({min:7})
         .trim()
         .escape()
 
